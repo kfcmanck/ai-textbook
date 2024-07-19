@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 디지털교과서 데이터 분석 워크시트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .analysis {
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .alert {
+            background-color: #f39c12;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI 디지털교과서 데이터 분석 워크시트</h1>
+    
+    <h2>1. 전체 학급 데이터</h2>
+    <input type="number" id="classCompletionRate" placeholder="학습 이수율 (%)">
+    <input type="number" id="classSubmissionRate" placeholder="과제 제출율 (%)">
+    <input type="number" id="classAverageStudyTime" placeholder="일일 평균 학습 시간 (분)">
+    <input type="number" id="classLoginFrequency" placeholder="주간 평균 로그인 횟수">
+
+    <h2>2. AI 어시스턴트 분석 (전체 학급)</h2>
+    <div id="classAnalysis" class="analysis"></div>
+
+    <h2>3. 개별 학생 데이터</h2>
+    <input type="text" id="studentName" placeholder="학생 이름">
+    <input type="number" id="studentCompletionRate" placeholder="학습 이수율 (%)">
+    <input type="number" id="studentSubmissionRate" placeholder="과제 제출율 (%)">
+    <input type="number" id="studentAverageStudyTime" placeholder="일일 평균 학습 시간 (분)">
+    <input type="number" id="studentLoginFrequency" placeholder="주간 평균 로그인 횟수">
+
+    <h2>4. AI 어시스턴트 분석 (개별 학생)</h2>
+    <div id="studentAnalysis" class="analysis"></div>
+
+    <h2>5. 전체 학급 분석 (직접 입력)</h2>
+    <textarea id="classStrengths" placeholder="강점 (예: 과제 제출율이 높고, 학습 참여도가 전반적으로 양호함)"></textarea>
+    <textarea id="classImprovements" placeholder="개선점 (예: 일일 학습 시간 증가 필요, 학습 이수율 향상을 위한 전략 수립 필요)"></textarea>
+
+    <h2>6. 개별 학생 분석 및 제안 (직접 입력)</h2>
+    <textarea id="studentAnalysisInput" placeholder="분석 및 제안 (예: 과제 제출은 우수하나 학습 시간이 부족함. 효율적인 학습 방법 지도 필요)"></textarea>
+
+    <h2>7. 전반적인 인사이트 및 제안</h2>
+    <div id="finalInsight" class="analysis"></div>
+
+    <button onclick="generateAnalysis()">분석 생성</button>
+
+    <div class="alert">
+        <strong>유의사항:</strong>
+        <ul>
+            <li>모든 데이터는 가상의 것입니다.</li>
+            <li>실제 현장에서는 개인정보 보호와 윤리적 측면을 고려해야 합니다.</li>
+            <li>데이터는 의사결정을 돕는 도구일 뿐, 모든 교육적 상황을 대변하지 않습니다.</li>
+        </ul>
+    </div>
+
+    <script>
+        function generateAnalysis() {
+            // 실제 분석 로직은 여기에 구현합니다.
+            // 이 예제에서는 간단한 더미 데이터를 사용합니다.
+            document.getElementById('classAnalysis').innerHTML = "전체 학급의 학습 이수율은 평균보다 높고, 과제 제출율도 양호합니다. 하지만 일일 평균 학습 시간은 개선이 필요해 보입니다.";
+            document.getElementById('studentAnalysis').innerHTML = "이 학생의 과제 제출율은 우수하지만, 학습 시간이 부족합니다. 효율적인 학습 방법 지도가 필요할 것 같습니다.";
+            document.getElementById('finalInsight').innerHTML = "전반적으로 학급의 성과는 양호하나, 개별 학생에 대한 맞춤형 지원이 필요합니다. 특히 학습 시간 관리와 효율적인 학습 방법에 대한 지도가 요구됩니다.";
+        }
+    </script>
+</body>
+</html>
